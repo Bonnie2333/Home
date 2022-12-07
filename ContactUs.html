@@ -1,0 +1,201 @@
+<!--Patricia Liliana C. Bigornian--> 
+<!--Activity # 10 – Login Form--> 
+<!--BSIT-2A--> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
+  <style>
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+  text-decoration: none;
+  color: #daf7fe;
+}
+
+body{
+  background: url("https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80")no-repeat center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+form{
+  background: rgba(27,31,34,0.80);
+  width: 640px;
+  margin: 170px auto;
+  max-width: 97%;
+  border-radius: 4px;
+  padding: 55px 30px;
+  box-shadow: 0px 0px 10px #26d3ff;
+}
+
+form .title h2{
+  letter-spacing: 6px;
+  border-bottom: 1px dashed #daf7fe;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+form .half{
+  display: flex;
+  justify-content: space-between;
+}
+
+form .half .item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  width: 48%;
+}
+
+form label{
+  display: block;
+  font-size: 13px;
+  letter-spacing: 3.5px;
+  margin-bottom: 16px;
+}
+
+form .half .item input{
+  border-radius: 4px;
+  border: 1px dashed #daf7fe;
+  outline: 0;
+  padding: 16px;
+  width: 90%;
+  height: 44px;
+  background: transparent;
+  font-size: 18px;
+}
+
+form .full{
+  margin-bottom: 24px;
+}
+
+form .full textarea{
+  background: transparent;
+  border-radius: 4px;
+  border: 1px dashed #daf7fe;
+  outline: 0;
+  padding: 12px 16px;
+  width: 100%;
+  height: 200px;
+  font-size: 17px;
+}
+
+form .action{
+  margin-bottom: 32px;
+}
+
+form .action input{
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  height: 44px;
+  letter-spacing: 3px;
+  outline: 0;
+  padding: 0 20px 0 22px;
+  margin-right: 10px;
+}
+
+form .action input{
+  background: #ADD8E6;
+  color: black;
+  text-align: center;
+}
+form .action input:hover{
+  opacity: 0.5;
+  background: #add8e6;
+  color: black;
+  box-shadow:    0 0 5px   #c5e1a5, 0 0 25px  #c5e1a5, 0 0 50px  #c5e1a5,0 0 100px #c5e1a5;
+  transition: opacity 0.5s;
+}
+form .icons a{
+  border: 1px dashed #2B65EC;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 600;
+  width: 38px;
+  margin-right: 10px;
+}
+form .icons a:hover{
+  opacity: 0.5;
+  background: #add8e6;
+  color: white;
+  box-shadow:    0 0 5px   #c5e1a5, 0 0 25px  #c5e1a5, 0 0 50px  #c5e1a5,0 0 100px #c5e1a5;
+  transition: opacity 0.5s;
+}
+
+form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover{
+  background: rgba(255,255,255,0.075);
+}
+
+@media (max-width: 480px){
+  form .half{
+    flex-direction: column;
+  }
+  form .half .item{
+    width: 100%;
+  }
+  form .action{
+    display: flex;
+    flex-direction: column;
+  }
+  form .action input{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+  </style>
+  <body>
+      <form action="">
+      <div class="title">
+        <h2>CONTACT</h2>
+      </div>
+      <div class="half">
+        <div class="item">
+          <label for="name">FIRST NAME</label>
+          <input type="text" id = "name">
+        </div>
+        <div class="item">
+          <label for="email">LAST NAME</label>
+          <input type="text" id = "email">
+        </div>
+         <div class="item">
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="text" id = "number">
+        </div>
+      </div>
+      <div class="full">
+        <label for="comment">COMMENT</label>
+        <textarea name="" id = "comment"></textarea>
+      </div>
+      <div class="action">
+        <input typle="comment" value="SUBMIT" onClick="javascript:window.open('Main.html', '_blank');">
+        <input type="cancel" value = "CANCEL">
+      </div>
+      <div class="icons">
+        <a href="https://www.facebook.com/" target="_blank" class = "fa fa-facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank" class = "fa fa-instagram"></a>
+        <a href="https://accounts.spotify.com/en/login?continue=https" target="_blank" class = "fa fa-spotify"></a>
+        <a href="" target="_blank" class = "fa fa-phone"></a>
+        <a href="" target="_blank" class = "fa fa-envelope"></a>
+      </div>
+    </form>
+  </body>
+</html>
+
+

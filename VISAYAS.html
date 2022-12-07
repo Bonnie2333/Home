@@ -1,0 +1,355 @@
+<!--Patricia Liliana C. Bigornian--> 
+<!--Activity # 10 – Login Form--> 
+<!--BSIT-2A--> 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/49c67b1048.js" crossorigin="anonymous"></script>
+<body>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;  
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Helvetica, Sans-Serif;
+}
+body {
+  background: url("https://c0.wallpaperflare.com/path/371/378/517/chocolate-hills-bohol-philippines-77d702541f16c251e5e86029757aac2b.jpg") no-repeat center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 100;
+  background: grey;
+  width: 90px;
+  overflow: hidden;
+  transition: width 0.2s linear;
+  box-shadow: 0 2px 35px rgba(0,0,0,alpha);
+  backdrop-filter: blur(6px);
+  background: rgba(28,28,38,0.7);
+  border: 1px solid rgba(255,255,255,0.18);
+  top: 0;
+  left: 0;
+  font-size: 15px;
+}
+.logo {
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  margin: 10px 0 0 10px;
+  color: white;
+}
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span {
+  font-weight: bold;
+  padding-left: 15px ;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #D3D3D3;
+}
+a {
+  position: relative;
+  font-size: 15px;
+  display: table;
+  width: 300px;
+  padding: 10px;
+  color: white;
+}
+.fa-solid {
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+  color: white;
+}
+.contact{
+  position: absolute;
+  bottom: 0;
+}
+
+a:hover{
+  background: grey; 
+}
+nav:hover {
+  width: 280px;
+ transition: all 0.5 ease;
+} 
+button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  margin: 8px 8px;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 50%;
+  height: 10%;
+  font-size: 15px;
+  outline: none;
+  text-align: center;
+  transition: 0.7s;
+  font-weight: 100;
+  outline: none;
+}
+button:hover {
+  opacity: 0.5;
+  background: pink;
+  color: black;
+  box-shadow:    0 0 5px  #ff1818,
+                 0 0 25px  #ff1818,
+                 0 0 50px  #ff1818,
+                 0 0 100px  #ff1818;
+  transition: opacity 0.5s;
+}
+button.back{
+  color: white;
+  padding: 12px 15px;
+  margin: 15px  0px 10px 100px;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 5%;
+  height: 10%;
+  border-radius: 100px;
+  font-size: 12px
+}
+button.back:hover {
+  opacity: 0.8;
+  background: white;
+  color: black;
+  box-shadow:    0 0 5px  #eeff04,
+                 0 0 25px  #eeff04,
+                 0 0 50px  #eeff04,
+                 0 0 100px  #eeff04;
+  transition: opacity 0.5s;
+}
+hr {
+  border: 1px white solid;]
+  width: 90%;
+  margin: 0 auto;
+}
+.about-text h1{
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 60px;
+    letter-spacing: 4px;
+    opacity: 0.8;
+    background-image: linear-gradient(95deg, #073113,  #bdff53,  #7db5ff, #0d4910);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-transform: capitalize;
+}
+.about{
+  width: 100%;
+  padding: 80px 0px;
+  max-width: 77%;
+  padding: 55px 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px #eeee  ;
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  position: inside;
+  z-index: -1;
+}
+.about img{
+  height: auto;
+  width: 400px;
+  margin: 12px 0px 0px 5px;
+  max-width: 66%;
+}
+.about-text{
+  width: 400px;
+  margin: 5px 0px 0px 850px;;
+}
+.main {
+  width:1130px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text p {
+  color: white;
+  letter-spacing: 0.4px;
+  line-height: 28px;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
+
+.section1{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 60%;
+  margin: 20px auto 0 auto;
+  box-shadow: 0px 0px 10px rgba(63, 119, 61, 0.933)  ;
+  backdrop-filter: blur(6px);
+  background: rgba(28,28,38,0.7);
+}
+.section1 img{
+  height: 200px;
+}
+.section1 h1{
+  margin: o;
+  color: #128b27;
+  line-height: 90px;
+}
+.section1 p{
+  color: #ffffff;
+  margin-right: 15px;
+  line-height: 20px;
+}
+</style>
+<button class="back" onclick="history.back()">Back</button>
+<div class="about-text">
+  <h1>Visayas </h1>
+</div>
+<div class="section1">
+  <div class="text">
+    <h1>BORACAY</h1>
+    <p>
+        Boracay is not just a well-known destination in the Western Visayas, but also among travelers from all over the world. Visitors come to this tropical paradise for a variety of reasons. Boracay has it all, from dazzling white sand to azure seas to exciting water sports to a lively and exciting nightlife.
+    </div>
+      <img src="https://www.zenrooms.com/blog/wp-content/uploads/2020/09/boracay-2-1.jpg" alt="boracay"/>
+      </p>
+    </div>
+    <div class="section1">
+      <div class="text">
+        <h1>KALANGGAMAN ISLAND </h1>
+        <p>
+            The Leyte island of Kalanggaman is sometimes compared to the more famous Boracay. What makes this beach special are the lovely sandbars and the relative absence of tourists. The island is a great area to go swimming or just relax. Paddleboards and kayaks are also available for rent.
+        </div>
+          <img src="https://www.zenrooms.com/blog/wp-content/uploads/2021/01/kalanggaman-island-visayas-tourist-spots.jpg" alt="kalanggaman"/>
+          </p>
+        </div>
+        <div class="section1">
+          <div class="text">
+            <h1> THE RUINS </h1>
+            <p>
+                The Ruins is the most well-known attraction in all of Bacolod.  The Ruins, a once-grand home in Bacolod City that was destroyed in a wartime fire, to understand about the tragic love tale of Don Mariano Ledesma Lacson and Maria Braga. The Ruins is one of the historical sites in Visayas because of its significance in the region's past.
+            </div>
+              <img src="https://www.zenrooms.com/blog/wp-content/uploads/2020/11/the-ruins-bacolod.jpg" alt="ruins"/>
+              </p>
+            </div>
+<nav> 
+  <ul> 
+    <li>
+      <a href="#" class="logo">
+        <img src="https://www.pngkey.com/png/full/118-1185109_3d-waving-graphics-flag-of-philippines-philippine-flag.png" alt="">
+        <span class="nav-item">About Philippines</span>
+      </a>
+    </li>
+    <li>
+      <a href="HISTORY.html">
+        <i class="fa-solid fa-book"></i>
+        <span class="nav-item">History</span>
+      </a>
+    </li>
+    <li>
+      <a href="GEO&ENV.html">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <span class="nav-item">Geography & Environment</span>
+      </a>
+    </li>
+    <li>
+      <a href="DEMOGRAPH.html">
+        <i class="fa-solid fa-id-card-clip"></i>
+        <span class="nav-item">Demographics</span>
+      </a>
+    </li>
+    <li>
+      <a href="CULTURE.html">
+        <i class="fa-solid fa-church"></i>
+        <span class="nav-item">Culture</span>
+      </a>
+    </li>
+  </ul>
+
+   <ul> 
+   <li>
+      <a href="#" class="logo">
+        <img src="https://freepngimg.com/thumb/beach/28398-7-beach-transparent.png" alt="">
+        <span class="nav-item">Tourist Attractions</span>
+      </a>
+    </li>
+    <li>
+      <a href="LUZON.html">
+        <i class="fa-solid fa-l"></i>
+        <span class="nav-item">Luzon</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="fa-solid fa-v"></i>
+        <span class="nav-item">Visayas</span>
+      </a>
+    </li>
+    <li>
+      <a href="MINDANAO.html">
+        <i class="fa-solid fa-m"></i>
+        <span class="nav-item">Mindanao</span>
+      </a>
+    </li>
+  </ul>
+  <hr>
+  <ul>
+    <li>
+    <a href="VideoGallery.Html">
+      <i class="fa-solid fa-video" ></i>
+      <button>Video Gallery</button>
+    </a>
+  </li>
+</ul>
+<ul>
+  <li>
+   <a href="#">
+     <i class="fa-solid fa-right-to-bracket"></i>
+     <button onClick="javascript:window.open('Login.html', '_blank');">Log in </button>
+   </a>
+ </li>
+</ul>
+   <ul>
+     <li>
+      <a href="ContactUs.html" class="contact">
+        <i class="fa-solid fa-address-book"></i>
+        <span class="nav-item">Contact Us</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+    </body>
+  </head>
+</html>
